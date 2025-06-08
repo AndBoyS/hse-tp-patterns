@@ -2,7 +2,7 @@ from typing import Any
 
 
 # Базовый пример
-def outer_function(msg) -> Any:
+def outer_function(msg: str) -> Any:
     def inner_function() -> Any:
         print(f"Message: {msg}")
 

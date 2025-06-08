@@ -6,7 +6,7 @@ def send_email(to: str, subject: str, body: str) -> None:
 
 
 class NotificationManager:
-    def __init__(self, notify_impl: Callable[[str], str]) -> None:
+    def __init__(self, notify_impl: Callable[[str, str, str], None]) -> None:
         self.notify_impl = notify_impl
 
     def notify(self, user_email: str, message: str) -> None:
