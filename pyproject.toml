@@ -1,0 +1,62 @@
+[project]
+name = "hse-tp-patterns"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mypy>=1.16.0",
+    "ruff>=0.11.13",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    "ASYNC",
+    # comprehensions
+    "C4",
+    # implicit string concat
+    "ISC",
+    # pytest style
+    "PT",
+    # return
+    "RET",
+    # use pathlib
+    "PTH",
+    # remove commented code
+    "ERA",
+    # pandas-vet
+    "PD",
+    # use specific error code for type ignores
+    "PGH",
+    # pylint
+    "PL",
+    # numpy
+    "NPY",
+    "PERF",
+    "FURB",
+]
+ignore = [
+    # Line too long
+    "E501",
+    # open should be replaced by Path.open
+    "PTH123",
+    "ISC001",
+]
+
+[tool.mypy]
+strict = true
